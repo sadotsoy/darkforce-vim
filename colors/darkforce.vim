@@ -48,7 +48,7 @@ call darkforce#SetGui('dfSignMessage', { "fg": s:colors.bayLeaf })
 call darkforce#SetGui('dfSignWarning', { "fg": s:colors.diSerria })
 call darkforce#SetGui('dfTextLight', { "fg": s:colors.alto })
 call darkforce#SetGui('dfTextLight', { "fg": s:colors.alto })
-call darkforce#SetGui('dfType', { "fg": s:colors.shuttleGray, "gui": "italic", "cterm": "italic" })
+call darkforce#SetGui('dfType', { "fg": s:colors.shuttleGray, "gui": "underline,italic", "cterm": "italic" })
 call darkforce#SetGui('dfWarningText', { "fg": s:colors.diSerria, "bg": s:colors.tuatara, "cterm": "bold", "gui": "bold" })
 call darkforce#SetGui('dfIdentifier', { "fg": s:colors.silverRust })
 call darkforce#SetGui('dfItalic', { "gui": "italic", "cterm": "italic" })
@@ -59,7 +59,7 @@ call darkforce#SetGui('Boolean', { "fg": s:colors.japonica, "gui": "italic,under
 call darkforce#SetGui('Closures', { "fg": s:colors.dustyGray })
 call darkforce#SetGui('Comment', { "fg": s:colors.saltBox, "gui": "italic" })
 call darkforce#SetGui('Conditional', { "fg": s:colors.silverChalice })
-call darkforce#SetGui('Constant', { "gui": "italic,underline", "cterm": "italic,underline" })
+call darkforce#SetGui('Constant', { "fg": s:colors.silver, "gui": "italic,underline", "cterm": "italic,underline" })
 call darkforce#SetGui('Debug', { "gui": "bold", "cterm": "bold" })
 call darkforce#SetGui('Define', { "fg": s:colors.viola, "gui": "bold", "cterm": "bold" })
 call darkforce#SetGui('Delimiter', { "fg": s:colors.viola, "gui": "bold", "cterm": "bold" })
@@ -252,20 +252,27 @@ hi! link markdownCode Identifier
 hi! link markdownLinkDelimiter Noise
 hi! link markdownLinkTextDelimiter Noise
 
-" ==+ TYPESCRIPT - YATS.VIM
-hi! link  typescriptAbstract Operator
-hi! link  typescriptAccessibilityModifier StorageClass
-hi! link  typescriptClassKeyword Normal
-hi! link  typescriptClassName Label
-hi! link  typescriptExport StorageClass
-hi! link  typescriptImport typescriptExport
-hi! link  typescriptCastKeyword StorageClass
-hi! link  typescriptParens Noise
-hi! link  typescriptPredefinedType dfType
-hi! link  typescriptObjectType dfType
-hi! link  typescriptTemplateSB dfRegex
-hi! link  typescriptTypeReference Normal
-hi! link  typescriptVariable StorageClass
+" ==+ TYPESCRIPT
+hi! link jsFunctionArgs Identifier
+hi! link typescriptAbstract Operator
+hi! link typescriptAccessibilityModifier StorageClass
+hi! link typescriptBlock jsModuleName
+hi! link typescriptBraces Special
+hi! link typescriptCastKeyword StorageClass
+hi! link typescriptClassKeyword Identifier
+hi! link typescriptClassName Identifier
+hi! link typescriptDecorator dfFunction
+hi! link typescriptExport StorageClass
+hi! link typescriptIdentifierName jsModuleName
+hi! link typescriptImport jsImport
+hi! link typescriptObjectType dfType
+hi! link typescriptParens Special
+hi! link typescriptPredefinedType dfType
+hi! link typescriptReserved StorageClass
+hi! link typescriptTemplateSB dfRegex
+hi! link typescriptTypeReference dfType
+hi! link typescriptVariable StorageClass
+hi! link typescriptVariableDeclaration dfIdentifier
 
 " ==+ CSS
 hi! link cssAtRule diffRemoved
